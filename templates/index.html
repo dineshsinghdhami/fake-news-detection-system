@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Fake News Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <nav>
+
+        <div class="logo">
+            Fake News Detection
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Checker</a>
+
+            <a href="/dashboard">
+                Dashboard
+            </a>
+
+            <a href="/history">
+                History
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <h1>
+            Fake News Detection System
+        </h1>
+
+        <p>
+            Analyze a news headline or article using machine learning
+            and TF-IDF based text classification.
+        </p>
+
+    </section>
+
+
+    <section class="content-grid">
+
+
+        <!-- =====================================================
+             LEFT SIDE - NEWS CHECKER
+        ====================================================== -->
+
+        <div class="checker-card">
+
+            <h2>
+                Check News
+            </h2>
+
+
+            <form method="POST">
+
+                <label>
+                    News Headline or Article
+                </label>
+
+                <textarea
+                    name="news_text"
+                    placeholder="Paste news headline or article here..."
+                    required>{{ news_text }}</textarea>
+
+
+                <button type="submit">
+                    Analyze News
+                </button>
+
+            </form>
+
+
+            <!-- =================================================
+                 WARNING MESSAGE
+            ================================================== -->
+
+            {% if message %}
+
+                <div class="warning-result">
+                    {{ message }}
+                </div>
+
+            {% endif %}
+
+
+            <!-- =================================================
+                 PREDICTION RESULT
+            ================================================== -->
+
+            {% if prediction %}
+
+                {% if prediction == "REAL" %}
+
+                    <div class="result real">
+                        REAL NEWS
+                    </div>
+
+                {% else %}
+
+                    <div class="result fake">
+                        FAKE NEWS
+                    </div>
+
+                {% endif %}
+
+            {% endif %}
+
+        </div>
+
+
+        <!-- =====================================================
+             RIGHT SIDE - PROJECT INFORMATION
+        ====================================================== -->
+
+        <div class="info-card">
+
+            <h2>
+                Project Information
+            </h2>
+
+
+            <div class="info-row">
+
+                <span>
+                    Project Type
+                </span>
+
+                <strong>
+                    NLP Classification
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>
+                    Text Processing
+                </span>
+
+                <strong>
+                    TF-IDF
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>
+                    Models Tested
+                </span>
+
+                <strong>
+                    4 Models
+                </strong>
+
+            </div>
+
+
+            <div class="info-row">
+
+                <span>
+                    Technology
+                </span>
+
+                <strong>
+                    Python + Flask
+                </strong>
+
+            </div>
+
+
+            <div class="note">
+
+                Developed by
+
+                <a href="https://dineshsinghdhami.com.np"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <strong>
+                        Dinesh Singh Dhami
+                    </strong>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>History - Fake News Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <nav>
+
+        <div class="logo">
+            Fake News Detection
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Checker</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/history">History</a>
+        </div>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <h1>Prediction History</h1>
+
+        <p>
+            Previously analyzed news content and model predictions.
+        </p>
+
+    </section>
+
+
+    <div class="history-card">
+
+        {% if records %}
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>News</th>
+                        <th>Prediction</th>
+                        <th>Date & Time</th>
+                    </tr>
+                </thead>
+
+
+                <tbody>
+
+                    {% for record in records %}
+
+                    <tr>
+
+                        <td class="news-cell">
+                            {{ record.News }}
+                        </td>
+
+                        <td>
+
+                            {% if record.Prediction == "REAL" %}
+
+                                <span class="status real-status">
+                                    REAL
+                                </span>
+
+                            {% else %}
+
+                                <span class="status fake-status">
+                                    FAKE
+                                </span>
+
+                            {% endif %}
+
+                        </td>
+
+                        <td>
+                            {{ record.PredictionTime }}
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="empty-state">
+            No predictions available yet.
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

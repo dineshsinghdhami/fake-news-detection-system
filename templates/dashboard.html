@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Fake News Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <nav>
+        <div class="logo">
+            Fake News Detection
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Checker</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/history">History</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Prediction Dashboard</h1>
+
+        <p>
+            Overview of predictions made using the fake news
+            detection model.
+        </p>
+    </section>
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+            <span>Total Predictions</span>
+            <h2>{{ total_predictions }}</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>Real News</span>
+            <h2>{{ real_count }}</h2>
+        </div>
+
+        <div class="stat-card">
+            <span>Fake News</span>
+            <h2>{{ fake_count }}</h2>
+        </div>
+
+    </section>
+
+    <section class="dashboard-card">
+
+        <h2>Prediction Summary</h2>
+
+        <div class="summary-row">
+
+            <div class="summary-box real-summary">
+                <span>Real News Predictions</span>
+                <strong>{{ real_count }}</strong>
+            </div>
+
+            <div class="summary-box fake-summary">
+                <span>Fake News Predictions</span>
+                <strong>{{ fake_count }}</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+</body>
+
+</html>
