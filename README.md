@@ -1,4 +1,4 @@
-# Fake News Detection System
+# # Fake News Detection System
 
 ![License](https://img.shields.io/badge/license-Proprietary-red)
 ![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
@@ -14,7 +14,7 @@ It classifies news text as **REAL** or **FAKE** and supports both **English and 
 
 ---
 
-## Features
+## # Features
 
 - English and Nepali news classification
 - REAL / FAKE prediction
@@ -33,7 +33,7 @@ It classifies news text as **REAL** or **FAKE** and supports both **English and 
 
 ---
 
-## Machine Learning Models
+## # Machine Learning Models
 
 The project compares:
 
@@ -58,7 +58,7 @@ fake_news_model.pkl
 
 ---
 
-## Machine Learning Workflow
+## # Machine Learning Workflow
 
 ```text
 News Dataset
@@ -82,7 +82,7 @@ Flask Web Application
 
 ---
 
-## Tech Stack
+## # Tech Stack
 
 - **Python**
 - **Flask**
@@ -96,7 +96,7 @@ Flask Web Application
 
 ---
 
-## Bilingual Support
+## # Bilingual Support
 
 The preprocessing pipeline preserves both English and Nepali characters.
 
@@ -114,7 +114,7 @@ This allows the system to process both English and Nepali text patterns.
 
 ---
 
-## Flask Application
+## # Flask Application
 
 The application contains three pages:
 
@@ -134,7 +134,7 @@ Prediction history stores:
 
 ---
 
-## Project Structure
+## # Project Structure
 
 ```text
 fake-news-detection-system/
@@ -164,7 +164,7 @@ fake-news-detection-system/
 
 ---
 
-## Run the Application
+## # Run the Application
 
 ```bash
 python app.py
@@ -178,9 +178,9 @@ http://127.0.0.1:5000
 
 ---
 
-## Example
+## # Example
 
-### English
+### # English
 
 ```text
 Government announces a new scholarship program for engineering students.
@@ -192,7 +192,7 @@ Output:
 REAL NEWS
 ```
 
-### Nepali
+### # Nepali
 
 ```text
 सरकारले नयाँ शिक्षा नीति सार्वजनिक गरेको छ।
@@ -218,7 +218,7 @@ FAKE NEWS
 
 ---
 
-## Limitations
+## # Limitations
 
 - The training dataset is relatively small.
 - Prediction quality depends on the training data.
@@ -227,7 +227,7 @@ FAKE NEWS
 
 ---
 
-## Future Improvements
+## # Future Improvements
 
 - Larger English and Nepali datasets
 - Source credibility checking
@@ -236,7 +236,7 @@ FAKE NEWS
 
 ---
 
-## Author
+## # Author
 
 **Dinesh Singh Dhami**
 
