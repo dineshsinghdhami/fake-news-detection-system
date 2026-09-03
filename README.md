@@ -27,6 +27,10 @@ It classifies news text as **REAL** or **FAKE** and supports both **English and 
 
 ---
 
+![Fake News Detection Dashboard](dashboard.png)
+
+---
+
 ## Machine Learning Models
 
 The project compares:
