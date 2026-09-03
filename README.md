@@ -27,7 +27,9 @@ It classifies news text as **REAL** or **FAKE** and supports both **English and 
 
 ---
 
-![Fake News Detection Dashboard](dashboard.png)
+<p align="left">
+  <img src="dashboard.png" alt="Fake News Detection Dashboard" width="700">
+</p>
 
 ---
 
